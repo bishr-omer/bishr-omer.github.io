@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bishr Omer — Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10212f;
+    --paper: #f4efe7;
+    --yellow: #c79b2c;
+    --coral: #c96f57;
+    --teal: #4f8f8b;
+    --indigo: #5363b8;
+    --lavender: #9ca7d8;
+    --muted: #655d68;
+    --card-bg: #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(16,33,47,0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(244,239,231,0.08);
+  }
+  .nav-logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 800; font-size: 1.15rem;
+    color: var(--yellow); letter-spacing: 0.02em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; color: var(--paper);
+    text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--yellow); }
+
+  /* ---- HERO ---- */
+  #hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top right, rgba(79,143,139,0.22), transparent 32%),
+      radial-gradient(circle at bottom left, rgba(201,111,87,0.14), transparent 28%),
+      linear-gradient(135deg, #10212f 0%, #172b3a 55%, #0d1823 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg-shapes {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-bg-shapes .shape1 {
+    position: absolute; width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(79,143,139,0.18) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    animation: float 8s ease-in-out infinite;
+  }
+  .hero-bg-shapes .shape2 {
+    position: absolute; width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(199,155,44,0.14) 0%, transparent 70%);
+    bottom: 50px; left: 100px;
+    animation: float 11s ease-in-out infinite reverse;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+  }
+
+  .hero-text { position: relative; }
+  .hero-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #8ec4bf;
+    border: 1.5px solid rgba(142,196,191,0.45);
+    padding: 0.25rem 0.75rem; border-radius: 2px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.0;
+    color: var(--paper);
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .hero-name .first-name,
+  .hero-name .last-name {
+    display: inline;
+  }
+  .hero-name span { color: var(--yellow); }
+  .hero-role {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: #b6bfdc;
+    margin-top: 1rem;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-desc {
+    color: #b8b2bf; font-size: 1rem; line-height: 1.75;
+    margin-top: 1.5rem; max-width: 480px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+  .btn-primary {
+    background: var(--yellow); color: var(--ink);
+    padding: 0.75rem 1.75rem; border-radius: 4px;
+    font-family: 'DM Mono', monospace; font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; transition: transform 0.15s, box-shadow 0.15s;
+    border: none;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(199,155,44,0.28); }
+  .btn-outline {
+    background: transparent; color: var(--paper);
+    padding: 0.75rem 1.75rem; border-radius: 4px;
+    font-family: 'DM Mono', monospace; font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; border: 1.5px solid rgba(244,239,231,0.28);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--paper); color: var(--yellow); }
+
+  .hero-stats {
+    position: relative;
+    display: flex; flex-direction: column; gap: 1rem;
+    padding-left: 3rem;
+    align-self: stretch;
+    justify-content: center;
+    margin-right: -5rem;
+    animation: fadeUp 0.7s 0.5s ease both;
+  }
+  .hero-background {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(244,239,231,0.1);
+    border-left: 4px solid var(--teal);
+    padding: 2.5rem;
+    border-radius: 0;
+    backdrop-filter: blur(10px);
+    width: calc(100% + 5rem);
+    max-width: none;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-background .section-label {
+    margin-bottom: 0.75rem;
+  }
+  .hero-background h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.45rem;
+    line-height: 1.1;
+    color: var(--paper);
+  }
+  .hero-background p {
+    margin-top: 0.85rem;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #c9c2cf;
+  }
+  .hero-background .highlight {
+    color: var(--yellow);
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-top: 0.25rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- SECTION BASE ---- */
+  section { padding: 6rem 5rem; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--coral); margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; line-height: 1.1;
+    color: var(--ink);
+  }
+  .section-title.light { color: var(--paper); }
+  .divider {
+    width: 60px; height: 4px; background: var(--yellow);
+    margin: 1rem 0 2.5rem;
+  }
+  .divider.coral { background: var(--coral); }
+  .divider.teal { background: var(--teal); }
+
+  /* ---- ABOUT ---- */
+  #about {
+    background: var(--paper);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .education-title {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    white-space: nowrap;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    line-height: 1;
+  }
+  .education-title .section-label {
+    margin-bottom: 0;
+    flex: 0 0 auto;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+  .education-title .title-text {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .about-text p {
+    font-size: 1.05rem; line-height: 1.85; color: #423c48;
+    margin-bottom: 1.2rem;
+  }
+  .about-text p strong { color: var(--ink); }
+  .langs {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem;
+  }
+  .lang-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem; border-radius: 3px;
+    border: 1.5px solid;
+  }
+  .lang-tag:nth-child(1) { color: var(--indigo); border-color: var(--indigo); background: rgba(42,26,255,0.05); }
+  .lang-tag:nth-child(2) { color: var(--coral); border-color: var(--coral); background: rgba(255,92,58,0.05); }
+  .lang-tag:nth-child(3) { color: #8a6830; border-color: var(--yellow); background: rgba(199,155,44,0.08); }
+  .lang-tag:nth-child(4) { color: #2d716b; border-color: var(--teal); background: rgba(79,143,139,0.08); }
+
+  .edu-timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+  .edu-item {
+    border-left: 3px solid var(--yellow);
+    padding-left: 1.25rem; padding-bottom: 0.25rem;
+    position: relative;
+  }
+  .edu-item::before {
+    content: ''; position: absolute;
+    left: -7px; top: 6px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--yellow); border: 2px solid var(--paper);
+    box-shadow: 0 0 0 2px var(--yellow);
+  }
+  .edu-item:nth-child(2) { border-left-color: var(--teal); }
+  .edu-item:nth-child(2)::before { background: var(--teal); box-shadow: 0 0 0 2px var(--teal); }
+  .edu-deg {
+    font-family: 'Fraunces', serif;
+    font-weight: 700; font-size: 0.95rem; color: var(--ink);
+  }
+  .edu-inst {
+    font-family: 'Lora', serif; font-style: italic;
+    font-size: 0.9rem; color: var(--muted); margin-top: 0.15rem;
+  }
+  .edu-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--coral); margin-top: 0.3rem;
+  }
+
+  /* ---- PUBLICATIONS ---- */
+  #publications { background: var(--ink); }
+  #publications .section-title { color: var(--paper); }
+
+  .pub-grid { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0; }
+  .pub-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px; padding: 2rem;
+    display: grid; grid-template-columns: auto 1fr; gap: 1.5rem;
+    align-items: start;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .pub-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-3px); }
+  .pub-year-badge {
+    font-family: 'Fraunces', serif;
+    font-size: 0.8rem; font-weight: 700;
+    color: var(--ink); background: var(--yellow);
+    padding: 0.35rem 0.65rem; border-radius: 3px;
+    white-space: nowrap; align-self: start;
+  }
+  .pub-year-badge.award { background: var(--coral); color: white; }
+  .pub-title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--paper); line-height: 1.5;
+  }
+  .pub-venue {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--teal); margin-top: 0.4rem;
+  }
+  .pub-authors {
+    font-size: 0.88rem; color: #9a92a2; margin-top: 0.35rem;
+    font-style: italic;
+  }
+  .pub-links { display: flex; gap: 0.75rem; margin-top: 0.85rem; }
+  .pub-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--lavender); text-decoration: none;
+    border-bottom: 1px solid rgba(156,167,216,0.34);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .pub-link:hover { color: var(--yellow); border-color: var(--yellow); }
+  .award-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--coral); border: 1px solid rgba(255,92,58,0.4);
+    padding: 0.2rem 0.6rem; border-radius: 3px; margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  /* ---- PROJECTS ---- */
+  #projects { background: #f0ece4; }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; margin-top: 0;
+  }
+  .project-card {
+    background: white;
+    border-radius: 8px; padding: 1.75rem;
+    border-top: 4px solid var(--yellow);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .project-card:nth-child(2) { border-top-color: var(--teal); }
+  .project-card:nth-child(3) { border-top-color: var(--coral); }
+  .project-card:nth-child(4) { border-top-color: var(--indigo); }
+  .project-card:nth-child(5) { border-top-color: var(--lavender); }
+  .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+  .project-icon {
+    font-size: 1.75rem; margin-bottom: 0.75rem;
+  }
+  .project-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--ink);
+  }
+  .project-desc {
+    font-size: 0.9rem; line-height: 1.6; color: var(--muted);
+    margin-top: 0.5rem;
+  }
+  .project-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem;
+  }
+  .project-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.05em; text-transform: uppercase;
+    background: var(--paper); color: var(--muted);
+    padding: 0.2rem 0.55rem; border-radius: 2px;
+    border: 1px solid #ddd8ce;
+  }
+  .project-link {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    margin-top: 1.25rem; border-bottom: 1.5px solid var(--ink);
+    padding-bottom: 1px; transition: color 0.15s;
+  }
+  .project-link:hover { color: var(--coral); border-color: var(--coral); }
+
+  /* ---- SKILLS ---- */
+  #skills {
+    background: linear-gradient(135deg, #10212f 0%, #0f1b26 58%, #143240 100%);
+    min-height: auto;
+  }
+  #skills .section-title { color: var(--paper); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem; margin-top: 0;
+  }
+  .skill-group {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(244,239,231,0.08);
+    border-radius: 6px; padding: 1.5rem;
+  }
+  .skill-group-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .skill-group:nth-child(1) .skill-group-title { color: var(--yellow); }
+  .skill-group:nth-child(2) .skill-group-title { color: var(--teal); }
+  .skill-group:nth-child(3) .skill-group-title { color: var(--coral); }
+  .skill-group:nth-child(4) .skill-group-title { color: var(--lavender); }
+  .skill-items { display: flex; flex-direction: column; gap: 0.5rem; }
+  .skill-item {
+    font-size: 0.88rem; color: #d5cfdb;
+    font-family: 'Lora', serif;
+    padding-left: 0.75rem; position: relative;
+  }
+  .skill-item::before {
+    content: '•'; position: absolute; left: 0;
+    color: rgba(244,239,231,0.28);
+  }
+
+  /* ---- CONTACT ---- */
+  #contact {
+    background: var(--paper);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .contact-text p {
+    font-size: 1.05rem; line-height: 1.8; color: #423c48;
+    margin-top: 1rem;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .contact-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255,255,255,0.88);
+    border-radius: 6px;
+    border-left: 4px solid;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .contact-item:nth-child(1) { border-left-color: var(--coral); }
+  .contact-item:nth-child(2) { border-left-color: var(--ink); }
+  .contact-item:nth-child(3) { border-left-color: var(--indigo); }
+  .contact-item:nth-child(4) { border-left-color: var(--teal); }
+  .contact-item:hover { transform: translateX(5px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+  .contact-icon { font-size: 1.3rem; width: 1.6rem; text-align: center; }
+  .contact-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .contact-value {
+    font-family: 'Fraunces', serif;
+    font-size: 0.92rem; font-weight: 600; color: var(--ink);
+    margin-top: 0.1rem;
+  }
+  .contact-big {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800; line-height: 1.0; color: var(--ink);
+  }
+  .contact-big span { color: var(--coral); }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--ink); color: var(--muted);
+    padding: 2rem 5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 3px solid var(--yellow);
+  }
+  footer .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 800; font-size: 1rem; color: var(--yellow);
+  }
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.06em;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 900px) {
+    #hero, #about, #contact {
+      grid-template-columns: 1fr;
+      padding: 6rem 2rem 3rem;
+      gap: 3rem;
+    }
+    .hero-stats { padding-left: 0; margin-right: 0; }
+    .hero-background { width: 100%; min-height: auto; }
+    .stat-card:nth-child(2) { margin-left: 0; }
+    section { padding: 5rem 2rem; }
+    footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">BISHR OMER</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#publications">Papers</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+  </div>
+  <div class="hero-text">
+    <div class="hero-tag">Researcher</div>
+    <h1 class="hero-name"><span class="first-name">Bishr </span><span class="last-name">Omer</span></h1>
+    <p class="hero-role">Image Quality &amp; Multimodal AI</p>
+    <p class="hero-desc">
+      M.Sc. in Information and Communication Engineering, Northwestern Polytechnical University.
+      Researching no-reference image quality assessment with multivariate Gaussian modeling and multimodal LLMs.
+    </p>
+    <div class="hero-cta">
+      <a href="#publications" class="btn-primary">View Publications</a>
+      <a href="https://github.com/bishr-omer" target="_blank" class="btn-outline">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-background">
+      <div class="section-label">Background</div>
+      <h2>Researcher in image quality and multimodal AI</h2>
+      <p>
+        M.Sc. candidate at Northwestern Polytechnical University focused on no-reference image quality assessment,
+        multivariate Gaussian modeling, and vision-language systems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Background</h2>
+    <div class="divider"></div>
+    <p>
+      I am a researcher in <strong>image quality assessment (IQA)</strong> and multimodal AI, currently completing my M.Sc. at Northwestern Polytechnical University (NPU) in Xi'an, China, under the supervision of Associate Professor Xu Li.
+    </p>
+    <p>
+      My research develops no-reference IQA frameworks using multivariate Gaussian (MVG) distributional modeling combined with handcrafted natural scene statistics and deep semantic features from vision-language models like CLIP and LLaVA.
+    </p>
+    <div class="langs">
+      <span class="lang-tag">English</span>
+      <span class="lang-tag">Arabic</span>
+      <span class="lang-tag">Fulfulde</span>
+      <span class="lang-tag">Chinese HSK4</span>
+    </div>
+  </div>
+  <div>
+    <h2 class="section-title education-title"><span class="section-label">Education</span><span class="title-text">Academic Path</span></h2>
+    <div class="divider teal"></div>
+    <div class="edu-timeline">
+      <div class="edu-item">
+        <div class="edu-deg">M.Sc. Information &amp; Communication Engineering</div>
+        <div class="edu-inst">Northwestern Polytechnical University, Xi'an, China</div>
+        <div class="edu-year">2023 – 2026 · NPU Presidential Scholarship</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">B.Sc. Electrical Engineering (Communications)</div>
+        <div class="edu-inst">Blue Nile University, Sudan</div>
+        <div class="edu-year">2017 – 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-label">Research Output</div>
+  <h2 class="section-title light">Publications</h2>
+  <div class="divider coral"></div>
+  <div class="pub-grid">
+
+    <div class="pub-card">
+      <div class="pub-year-badge">2026</div>
+      <div>
+        <div class="pub-title">
+          Multivariate Gaussian-Based No-Reference Image Quality Assessment for Remote Sensing Imagery
+          <!-- feel free to update the exact title -->
+        </div>
+        <div class="pub-venue">Sensors · MDPI · 2026</div>
+        <div class="pub-authors">Bishr Omar, Xu Li et al.</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.3390/s26031002" target="_blank" class="pub-link">DOI ↗</a>
+          <a href="https://github.com/bishr-omer" target="_blank" class="pub-link">Code ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-year-badge award">2025</div>
+      <div>
+        <div class="pub-title">
+          MVG-Based Spatial-Spectral Distortion Estimation for No-Reference Pansharpened Image Quality
+          <span class="award-badge">★ Best Paper</span>
+        </div>
+        <div class="pub-venue">ISCTech 2025 · Springer</div>
+        <div class="pub-authors">Bishr Omer, Xu Li et al.</div>
+        <div class="pub-links">
+          <a href="https://github.com/bishromer" target="_blank" class="pub-link">Code ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Open Source</div>
+  <h2 class="section-title">Projects</h2>
+  <div class="divider"></div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-icon">🔬</div>
+      <div class="project-name">MVG-SDI</div>
+      <div class="project-desc">Spectral distortion index for NR-IQA using MVG modeling with Benford's Law frequency domain descriptors and color moments.</div>
+      <div class="project-tags">
+        <span class="project-tag">MATLAB</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">IQA</span>
+      </div>
+      <a href="https://github.com/bishr-omer/MVG-SDI" target="_blank" class="project-link">GitHub ↗</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">📐</div>
+      <div class="project-name">MVG-Spa</div>
+      <div class="project-desc">Spatial distortion framework using Log-Gabor filters, LBP, and edge statistics within a multivariate Gaussian distributional model.</div>
+      <div class="project-tags">
+        <span class="project-tag">MATLAB</span>
+        <span class="project-tag">OpenCV</span>
+        <span class="project-tag">NSS</span>
+      </div>
+      <a href="https://github.com/bishr-omer/MVG-Spa" target="_blank" class="project-link">GitHub ↗</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🤖</div>
+      <div class="project-name">MVG-VQA</div>
+      <div class="project-desc">Multimodal BIQA combining NSS features, CLIP (ViT-B/32), and LLaVA embeddings with gradient boosting for AI-generated content quality.</div>
+      <div class="project-tags">
+        <span class="project-tag">PyTorch</span>
+        <span class="project-tag">CLIP</span>
+        <span class="project-tag">XGBoost</span>
+      </div>
+      <a href="https://github.com/bishr-omer/MVG-VQA" target="_blank" class="project-link">GitHub ↗</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">✅</div>
+      <div class="project-name">Habit Tracker</div>
+      <div class="project-desc">Android habit tracking app with partner sync functionality, built with Flutter and Firebase for couples to track shared goals.</div>
+      <div class="project-tags">
+        <span class="project-tag">Flutter</span>
+        <span class="project-tag">Dart</span>
+        <span class="project-tag">Firebase</span>
+      </div>
+      <a href="https://github.com/bishr-omer" target="_blank" class="project-link">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Technical Expertise</div>
+  <h2 class="section-title light">Skills</h2>
+  <div class="divider"></div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Research &amp; ML</div>
+      <div class="skill-items">
+        <div class="skill-item">Image Quality Assessment</div>
+        <div class="skill-item">Multivariate Gaussian Modeling</div>
+        <div class="skill-item">Vision-Language Models</div>
+        <div class="skill-item">PyTorch / XGBoost</div>
+        <div class="skill-item">Subjective Study Design (ITU-R BT.500-14)</div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Programming</div>
+      <div class="skill-items">
+        <div class="skill-item">Python</div>
+        <div class="skill-item">MATLAB</div>
+        <div class="skill-item">Dart / Flutter</div>
+        <div class="skill-item">Django</div>
+        <div class="skill-item">JavaScript</div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Libraries &amp; Tools</div>
+      <div class="skill-items">
+        <div class="skill-item">OpenCV</div>
+        <div class="skill-item">CLIP / LLaVA</div>
+        <div class="skill-item">Git / GitHub</div>
+        <div class="skill-item">Firebase</div>
+        <div class="skill-item">Claude Code</div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-items">
+        <div class="skill-item">English (Fluent)</div>
+        <div class="skill-item">Arabic (Native)</div>
+        <div class="skill-item">Fulfulde (Native)</div>
+        <div class="skill-item">Chinese (HSK 4)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div>
+    <div class="section-label">Get In Touch</div>
+    <div class="contact-big">Let's<br><span>Connect</span></div>
+    <p style="font-size:1rem; color:#5a5464; line-height:1.75; margin-top:1.25rem;">
+      Open to PhD opportunities, research collaborations, and interesting conversations about image quality, multimodal AI, or anything in between.
+    </p>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:bishromer@example.com" class="contact-item">
+      <span class="contact-icon">✉️</span>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">bishromer@example.com</div>
+      </div>
+    </a>
+    <a href="https://github.com/bishr-omer" target="_blank" class="contact-item">
+      <span class="contact-icon">💻</span>
+      <div>
+        <div class="contact-label">GitHub</div>
+        <div class="contact-value">github.com/bishr-omer</div>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/bishromer" target="_blank" class="contact-item">
+      <span class="contact-icon">🔗</span>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">linkedin.com/in/bishromer</div>
+      </div>
+    </a>
+    <a href="https://scholar.google.com" target="_blank" class="contact-item">
+      <span class="contact-icon">📚</span>
+      <div>
+        <div class="contact-label">Google Scholar</div>
+        <div class="contact-value">Bishr Omer</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">BISHR OMER</div>
+  <p>bishromer.github.io · Built with GitHub Pages</p>
+</footer>
+
+</body>
+</html>
