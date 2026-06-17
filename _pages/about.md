@@ -1,34 +1,51 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: MSc Researcher · <a href="https://en.nwpu.edu.cn/" target="_blank">Northwestern Polytechnical University</a> · Xi'an, China
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Xi'an, China</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<style>
+.clearfix p { text-align: justify; }
+</style>
+I am an MSc researcher at <a href="https://en.nwpu.edu.cn/" target="_blank">Northwestern Polytechnical University (NPU)</a>, Xi'an, China, supervised by <a href="https://teacher.nwpu.edu.cn/en/lixu.html" target="_blank">Associate Professor Xu Li</a>. My research focuses **Vision-Language Models (VLMs)**, **Multimodal Learning**, and **Computer Vision**. I am particularly interested in building intelligent systems that integrate visual and semantic information for image understanding, quality assessment, and scientific imaging applications.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I received my BSc in Electrical and Communication Engineering from <a href="https://www.uobn.edu.sd/" target="_blank">Blue Nile University</a>, Sudan, where I built a foundation in signal processing, digital communications, and embedded systems.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+**Research Interests:** Vision-Language Models · Multimodal Learning · Computer Vision · Blind Image Quality Assessment · 3D Gaussian Splatting Forensics · Scientific Image Analysis.
+
+My recent work bridges traditional image quality assessment and modern foundation models by developing a distortion-aware multimodal framework that combines handcrafted statistical features with frozen Vision-Language Models. This work is submitted to *Pattern Recognition* (Elsevier, 2026) and available as an <a href="https://arxiv.org/abs/2606.02002" target="_blank">arXiv preprint</a>.
+
+My work has been published in **Sensors** (MDPI, 2026) and recognized with a **Best Paper Award** at ISCTech 2025.
+
+## Research vision
+
+I aim to develop multimodal AI systems that:
+
+- Learn robust visual representations through language supervision.
+- Bridge low-level vision and foundation models.
+- Understand scientific and remote sensing imagery.
+- Improve the reliability and interpretability of AI systems.
+- Advance multimodal reasoning for real-world applications.
+
+## News
+
+- **2026:** Submitted "Distortion-Aware Fusion of Statistical and Vision-Language Features for Blind Image Quality Assessment" to Pattern Recognition.
+- **2026:** Published "A No-Reference Multivariate Gaussian-Based Spectral Distortion Index for Pansharpened Images" in Sensors.
+- **2025:** Received the Best Paper Award at ISCTech 2025.

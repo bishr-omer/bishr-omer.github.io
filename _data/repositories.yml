@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - bishr-omer
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - bishr-omer/multimodal-biqa
+  - bishr-omer/MCSF-3DGS
+  - Bishr-Omer/mvg-spectral-distortion-index
+  - Bishr-Omer/mvg-spatial-distortion-index
+  - Bishr-Omer/mvg-xgboost-video-quality-assessment

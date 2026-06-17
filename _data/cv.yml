@@ -1,189 +1,178 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Bishr Omer Abdelrahman Adam
+  label: MSc Researcher in Computer Vision & Image Quality Assessment
+  location: Xi'an, China
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  summary: MSc researcher at Northwestern Polytechnical University specializing in blind image quality assessment, vision-language models, and multimodal fusion frameworks.
+  email: ict.bishr@gmail.com
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: bishr-omer
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: # your LinkedIn username
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Northwestern Polytechnical University
+        location: Xi'an, China
+        url: https://en.nwpu.edu.cn/
+        area: Information and Communication Engineering
+        studyType: MSc
+        start_date: 2023-09
+        end_date: 2026-06
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Supervisor: Associate Professor Xu Li"
+          - "Presidential Full Scholarship"
+          - "Relevant coursework: Advanced Mathematics, Digital Image Processing, Machine Learning, Computer Vision, Signal Processing"
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Blue Nile University
+        location: Sudan
+        url: https://bnu.edu.sd/
+        area: Electrical and Communication Engineering
+        studyType: BSc
+        start_date: 2015-01
+        end_date: 2022-10
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Relevant coursework: Analog & Digital Communications, Optical Fiber & Satellite Systems, Antenna & Propagation, Microprocessors, Control Systems"
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Northwestern Polytechnical University
+        position: Graduate Researcher
+        location: Xi'an, China
+        start_date: 2023-09
+        end_date: 2026-06
         highlights:
-          - Relativity
-          - Description 2.
+          - Designed a three-stream distortion-aware BIQA framework fusing 138-dimensional NSS features with SigLIP and CLIP-H via a multiplicative gating network.
+          - Developed MVG-SDI and MVG-Spa, two independent NR quality metrics for pansharpened satellite imagery.
+          - Built MVG-VQA, a no-reference VQA system fusing spatial MVG features with temporal features using XGBoost regression.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Northwestern Polytechnical University
+        position: Teaching Assistant
+        location: Xi'an, China
+        start_date: 2023-11
+        end_date: 2024-12
         highlights:
-          - Description 1.
-          - Description 2.
+          - Delivered technical tutorials for undergraduate ICE courses.
+          - Recognized with the Teaching Assistant Award for outstanding instruction.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Pulse Company
+        position: Drive Test Engineer
+        location: Sudan
+        start_date: 2023-02
+        end_date: 2023-07
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Conducted field drive tests evaluating mobile network signal strength and coverage quality using Genex Probe software.
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: ALBADER Training and Human Development Center
+        position: English Language Instructor
+        location: Ad-Damazin, Sudan
+        start_date: 2022-06
+        end_date: 2022-12
+        highlights:
+          - Designed and delivered English language curriculum for 30+ students.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "Distortion-Aware Fusion of Statistical and Vision-Language Features for Blind Image Quality Assessment"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Bishr O.A. Adam
+          - Xu Li
+        publisher: Pattern Recognition, Elsevier
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2606.02002
+        summary: Under review. Proposes a three-stream BIQA framework fusing NSS features with SigLIP and CLIP-H via a multiplicative distortion-aware gating network.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "A No-Reference Multivariate Gaussian-Based Spectral Distortion Index for Pansharpened Images"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Bishr O.A. Adam
+          - Xu Li
+          - J. Wu
+          - X. Hao
+        publisher: Sensors, MDPI
+        releaseDate: 2026-01-01
+        url: https://doi.org/10.3390/s26031002
+        summary: Published in Sensors 2026, vol. 26, no. 1002.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "Multivariate Gaussian-Based No-Reference Quality Assessment for Spatial Distortion in Pansharpened Images"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Bishr O.A. Adam
+          - Xu Li
+          - Y. Wang
+          - X. Yang
+        publisher: ISCTech 2025 International Conference
+        releaseDate: 2025-01-01
+        summary: Best Paper Award.
+
+    Awards:
+      - title: Best Paper Award
+        date: 2025
+        awarder: ISCTech 2025 International Conference
+        summary: Awarded for research on MVG-based blind image quality assessment.
+
+      - title: Teaching Assistant Award
+        date: 2024
+        awarder: Northwestern Polytechnical University
+        summary: Recognized for excellence in academic instruction.
+
+      - title: Presidential Scholarship
+        date: 2023
+        awarder: Northwestern Polytechnical University
+        summary: Full Master's degree funding awarded on merit.
+
+      - title: Second Prize, Oral Presentation Award
+        date: 2024
+        awarder: NPU Scholarly Articles Presentation Competition
+
+      - title: Academic Poster Award
+        date: 2024
+        awarder: NPU Belt and Road International Forum
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "Python, MATLAB, C/C++ (Basic)"
+
+      - name: Deep Learning
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, TensorFlow, XGBoost, scikit-learn"
+
+      - name: Vision-Language Models
+        icon: fa-solid fa-eye
+        keywords: "CLIP (ViT-B/32, ViT-H-14), SigLIP (ViT-SO400M-14), DINOv2, Hugging Face Transformers, OpenCLIP"
+
+      - name: Tools
+        icon: fa-solid fa-wrench
+        keywords: "Git/GitHub, LaTeX, MS Office, Genex Probe"
 
     Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Arabic
+        summary: "Native"
+
+      - name: Fulfulde
+        summary: "Native"
 
       - name: English
-        summary: "Fluent"
+        summary: "Proficient"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Chinese
+        summary: "HSK 4"
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: Network Diploma (CompTIA Network+, CCNA, MCSA)
+        date: 2021-03
+        issuer: A2Z Training Centre, Sudan
+        icon: fa-solid fa-network-wired
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+      - name: Mobile Network Package Certification
+        date: 2021-06
+        issuer: Network Plus Training Center, Sudan
+        icon: fa-solid fa-mobile
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - name: Python Programming
+        date: 2021
+        issuer: Coursera
+        icon: fa-brands fa-python
 
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Training of Trainers (TOT)
+        date: 2022-09
+        issuer: ALbader Training Center, Sudan
+        icon: fa-solid fa-chalkboard-teacher
