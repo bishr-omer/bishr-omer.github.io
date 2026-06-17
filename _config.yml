@@ -16,7 +16,7 @@ lang: en
 icon: 🔬
 
 url: https://bishr-omer.github.io
-baseurl: /al-folio
+baseurl: ""
 last_updated: false
 impressum_path:
 back_to_top: true
@@ -166,7 +166,7 @@ external_sources:
     categories: [external-posts]
     tags: [google]
 
-# -----------------------------------------------------------------------------
+# ----------------------------------------------o -------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
 
