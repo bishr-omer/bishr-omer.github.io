@@ -1,11 +1,10 @@
 ---
 ---
-
-@article{adam2026distortion,
-  abbr        = {PR},
-  title       = {Distortion-Aware Fusion of Statistical and Vision-Language Features for Blind Image Quality Assessment},
-  author      = {Adam, Bishr O.A. and Li, Xu},
-  journal     = {Pattern Recognition},
+@article{adam2026peft,
+  abbr        = {SPIC},
+  title       = {Parameter-Efficient Adaptation of a Multi-Stream Vision-Language Framework for Blind Image Quality Assessment},
+  author      = {Adam, Bishr O. and Li, Xu},
+  journal     = {Signal Processing: Image Communication},
   publisher   = {Elsevier},
   year        = {2026},
   note        = {Under review},
@@ -13,9 +12,8 @@
   code        = {https://github.com/bishr-omer/multimodal-biqa},
   selected    = {true},
   bibtex_show = {true},
-  abstract    = {We propose a three-stream distortion-aware blind IQA framework that fuses a 138-dimensional NSS descriptor with two frozen VLM backbones, SigLIP (ViT-SO400M-14) and CLIP-H (ViT-H-14 LAION-2B), via a multiplicative gating network requiring no end-to-end fine-tuning.}
+  abstract    = {Blind image quality assessment (BIQA) increasingly relies on frozen vision-language model (VLM) embeddings, which are efficient but leave open how much accuracy is sacrificed without backbone adaptation and when such adaptation helps. We develop an efficient BIQA framework that fuses a 138-dimensional NSS descriptor with frozen SigLIP and CLIP-H embeddings through a lightweight regression head, and adapt its SigLIP stream with parameter-efficient Low-Rank Adaptation (LoRA), training only 0.23% of its parameters. Evaluating both frozen and adapted models across six datasets under image-level and reference-level protocols, we show that image-level splitting inflates frozen-feature SROCC by up to 0.44 and masks wide variation in true difficulty that only reference-level evaluation reveals. Adaptation recovers performance in proportion to this difficulty, with the largest gains where frozen features generalize poorly (up to +0.328 SROCC on TID2013).}
 }
-
 @article{adam2026sensors,
   abbr        = {Sensors},
   title       = {A No-Reference Multivariate Gaussian-Based Spectral Distortion Index for Pansharpened Images},
@@ -30,13 +28,18 @@
   selected    = {true},
   bibtex_show = {true}
 }
-
 @inproceedings{adam2025isctech,
   abbr        = {ISCTech},
   title       = {Multivariate Gaussian-Based No-Reference Quality Assessment for Spatial Distortion in Pansharpened Images},
   author      = {Adam, Bishr O.A. and Li, Xu and Wang, Y. and Yang, X.},
-  booktitle   = {ISCTech 2025 International Conference},
-  year        = {2025},
+  booktitle   = {Proceedings of the 13th International Conference on Information Systems and Computing Technology (ISCTech 2025)},
+  series      = {Lecture Notes in Networks and Systems},
+  volume      = {1715},
+  publisher   = {Springer},
+  address     = {Singapore},
+  year        = {2027},
+  doi         = {10.1007/978-981-95-4448-6_21},
+  html        = {https://doi.org/10.1007/978-981-95-4448-6_21},
   award       = {Best Paper Award},
   award_name  = {Best Paper},
   selected    = {true},
